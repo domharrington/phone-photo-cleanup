@@ -11,7 +11,7 @@ for i in $(ls *.jpg); do
       echo "$i found, deleting"
       rm $i
     else
-      echo "$i found"
+      echo "$i found $(find ~/Pictures -name $i)"
     fi
   fi
 done
@@ -25,7 +25,7 @@ for i in $(ls *.mp4); do
       echo "$i found, deleting"
       rm $i
     else
-      echo "$i found"
+      echo "$i found $(find ~/Pictures -name $i)"
     fi
   fi
 done
