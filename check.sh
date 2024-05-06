@@ -30,15 +30,3 @@ for i in $(ls *.mp4); do
   fi
 done
 
-# current total: 7688
-# current total: 7505
-# current total: 7310
-
-# Missing files from ~/Pictures
-
-# 20210916_081525.jpg not found
-# 20210916_095310.jpg not found
-# 20210916_095319.jpg not found
-# 20210916_131335.jpg not found
-# 20210916_132902.jpg not found
-# 20210916_193850.jpg not found
