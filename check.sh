@@ -4,7 +4,7 @@ set -e
 # Add this to see all of the commands being run
 # set -x
 
-find . -iname "*.jpg" -exec basename "{}" \; | while read i
+find . -iname "*.jpg" -printf '%P\n' | while IFS= read i
 do
   count=$(find ~/Pictures -name "$i" | wc -l)
   if [ $count -eq 0 ]; then
@@ -19,7 +19,7 @@ do
   fi
 done
 
-find . -iname "*.mp4" -exec basename "{}" \; | while read i
+find . -iname "*.mp4" -printf '%P\n' | while IFS= read i
 do
   count=$(find ~/Pictures -name "$i" | wc -l)
   if [ $count -eq 0 ]; then
@@ -34,7 +34,7 @@ do
   fi
 done
 
-find . -iname "*.mov" -exec basename "{}" \; | while read i
+find . -iname "*.mov" -printf '%P\n' | while IFS= read i
 do
   count=$(find ~/Pictures -name "$i" | wc -l)
   if [ $count -eq 0 ]; then

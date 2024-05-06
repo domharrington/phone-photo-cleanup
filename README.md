@@ -6,6 +6,18 @@ Multiselect a few hundred photos (this is slow and buggy right now)
 
 Drag them over to `./`
 
+You must install findutils first because we're using the `-printf` option in `find`:
+
+```sh
+brew install findutils
+```
+
+You'll also have to make sure your PATH includes the following so we can use `find` and not `gfind`:
+
+```sh
+PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+```
+
 Run `./check.sh`
 
 If a photo or video cannot be found in `~/Pictures`, it will print it out.
