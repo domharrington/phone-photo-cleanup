@@ -28,6 +28,14 @@ Run `./check.sh`
 
 If a photo or video cannot be found in `~/Pictures`, it will print it out.
 
+If you want noisier logs, you can use the VERBOSE option to print out if a file is found:
+
+```sh
+VERBOSE=true ./check.sh
+```
+
+By default it will only print when a file cannot be found.
+
 Run `DELETE=true ./check.sh` to cleanup files that we know can be found.
 
 For the ones that can't be found, drag them over into the WebDAV folder: http://admin@raspberrypi:2342/originals/ (put them into the proper folder) - this will import them into photoprism and eventually Syncthing them into ~/Pictures.

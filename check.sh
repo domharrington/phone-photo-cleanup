@@ -15,7 +15,7 @@ set -e
       if [ $DELETE ]; then
         echo "$i found, deleting"
         find . -iname "$i" -delete
-      else
+      elif [ $VERBOSE ]; then
         echo "$i found $found"
       fi
     fi
@@ -33,7 +33,7 @@ set -e
       if [ $DELETE ]; then
         echo "$i found, deleting"
         find . -iname "$i" -delete
-      else
+      elif [ $VERBOSE ]; then
         echo "$i found $found"
       fi
     fi
@@ -51,7 +51,7 @@ set -e
       if [ $DELETE ]; then
         echo "$i found, deleting"
         find . -iname "$i" -delete
-      else
+      elif [ $VERBOSE ]; then
         echo "$i found $found"
       fi
     fi
