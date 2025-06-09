@@ -1,10 +1,16 @@
 # phone-photo-cleanup
 
-Open [OpenMTP](https://github.com/ganeshrvel/openmtp) and navigate to DCIM/Camera
+## 1. Pull photos from phone
 
-Multiselect a few hundred photos (this is slow and buggy right now)
+Plug in the phone, then run:
 
-Drag them over to `./`
+```sh
+adb pull -a /sdcard/DCIM/Camera/. .
+```
+
+This will dump the contents of that folder into this one.
+
+## 2. Check to see if we have the files stores in `~/Pictures`
 
 You must install findutils first because we're using the `-printf` option in `find`:
 
@@ -28,7 +34,9 @@ For the ones that can't be found, drag them over into the WebDAV folder: http://
 
 In a few minutes you should be able to run `DELETE=true ./check.sh` again and it'll clear up the ones that have now been imported.
 
-Now go back to OpenMTP, reselect the same number of pictures and click delete.
-There is no delete progress, so you just have to wait a while. 
-I found the best way is to look at the name of the picture after the delete selection and wait until that is at the top of the list, then you know the delete has finished.
-If you attempt to do any other selection/moves whilst the delete is in progress, they'll fail silently.
+# 3. Cleanup photos from the phone
+
+Open [OpenMTP](https://github.com/ganeshrvel/openmtp) and navigate to DCIM/Camera
+
+Click to select all files and delete them.
+There is no delete progress, so you just have to wait a while.
