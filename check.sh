@@ -57,3 +57,4 @@ process_files() {
 process_files "jpg"
 process_files "mp4"
 process_files "mov"
+process_files "dng"
